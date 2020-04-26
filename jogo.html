@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do carro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio class="d-none" controls autoplay>
+        
+        <source src="top-gear.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <div id="cenario">
+        <img src="stone.png" id='pedra' class="d-none" alt="">
+       
+        <h3 id="player">Player:</h3>
+        <h3 id="contador">3</h3>
+        <img class="moveMeio d-none" id="carro" src="CARRO.png" alt="">
+    </div>
+    <script src="controlaPedra.js"></script>
+    <script src="controlaCarro.js"></script>
+    
+    <script>
+       (function(window,document){
+        let som = document.querySelector('audio');
+       document.addEventListener('keydown',(e)=>{
+        
+        som.play();
+       });
+
+       let player = document.querySelector('#player');
+       player.innerText +=' ' + String(window.location.search).slice(1);
+       
+       })(window,document)
+    </script>
+</body>
+</html>

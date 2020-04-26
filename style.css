@@ -1,0 +1,122 @@
+@font-face {
+    font-family: game-font;
+    src: url('kongtext.ttf');
+  }
+
+@keyframes anima-desce{
+    from{
+        top: 100px;
+    }
+    to{
+        top:650px;
+    }
+}
+*{
+    --porcentagem-propotcional: 197px;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.d-none{
+    display: none !important;
+}
+#cenario{
+    
+    background-clip: padding-box;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    background-image:linear-gradient(to bottom,  rgba(172, 39, 101, 0.70),  rgba(172, 39, 101, 0)),
+url('CENARIO_anima.gif');
+   background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    width: 630px;
+    height: 630px;
+    flex-direction: row;
+    align-items: flex-end;
+    
+    
+
+}
+#carro{
+    transition: ease-in 1s;
+    
+    /*outline: 1px solid white;*/
+    width: var(--porcentagem-propotcional);
+    height: var(--porcentagem-propotcional);
+    
+
+}
+
+.moveMeio{
+    transform: translateX(var(--porcentagem-propotcional)) ;
+}
+
+.moveDireita{
+    transform: translateX(calc(var(--porcentagem-propotcional)*2.2)) ;
+}
+
+#contador{
+    font-family: game-font;
+    flex: 1;
+    color: white;
+    font-size: 80px;
+    align-self: center;
+    text-align: center;
+}
+#player{
+    
+    margin: 0 auto;
+    position: absolute;
+    font-family: game-font;
+    z-index: 5;
+    color: white;
+    font-size: 20px;
+    align-self: flex-start;
+    text-align: center; 
+}
+.fundo-login{
+    
+    display: flex;
+    background-color: rgb(92, 157, 242);;
+    justify-content: center;
+    align-items: center;
+}
+.fundo-login form{
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(60, 197, 119);
+    box-shadow: 0px 0px 42px 26px mintcream;
+}
+.fundo-login input{
+    margin: 6px 0;
+}
+.submit{
+    height: 25px;
+    font-family: game-font;
+    color: white;
+    border: 0;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, rgb(72, 72, 255), rgb(47, 47, 148) );
+}
+.submit:hover{
+    background-image: linear-gradient(to bottom, rgb(16, 16, 226) 30%,  rgb(1, 1, 10) 100% );
+}
+.submit:active{
+    background-image: linear-gradient(to top, rgb(16, 16, 226) 30%,  rgb(1, 1, 10) 100% );
+}
+#pedra{
+    width: 30px;
+    position: absolute;
+    top:100px;
+    margin-left: 86px;
+   /* animation-name: anima-desce;*/
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: linear;
+}
